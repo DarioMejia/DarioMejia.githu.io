@@ -1,0 +1,58 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-image: url('imgs/header-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+blockquote {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: right;
+}
+
+/* Profile Picture Styles */
+.profile-pic {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+}
