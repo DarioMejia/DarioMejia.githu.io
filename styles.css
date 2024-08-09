@@ -57,42 +57,59 @@ footer {
     object-fit: cover;
 }
 
-#about {
+section {
     margin: 40px 0;
     padding: 20px;
-    background-color: #f9f9f9; /* Light background to distinguish section */
+    background-color: #f9f9f9; 
     border-radius: 8px;
     text-align: left;
 }
 
-#about .icon {
+section .icon {
     display: inline-block;
     vertical-align: top;
     width: 30px;
     margin-right: 0px;
 }
 
-#about .icon img {
+section .icon img {
     width: 25px;
     height: 25px;
 }
 
-#about .content {
+section .content {
     display: inline-block;
     max-width: calc(100% - 65px); /* 25px for icon width + 20px margin + extra space */
     vertical-align: top;
 }
 
-#about h2 {
+section h2 {
     margin-top: 0;
     font-size: 24px;
     font-weight: bold;
     color: #333;
 }
 
-#about p {
+section .content *:not(h2:first-of-type) {
     margin-top: 10px;
     font-size: 16px;
     line-height: 1.5;
     color: #555;
+}
+
+/* Specific styling for the Education section */
+#education ol {
+    padding-left: 20px;
+}
+
+#education li {
+    padding-right: 100px; /* Add padding to create space for the years */
+    position: relative; /* Allow absolute positioning for the years */
+}
+
+.years {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
 }
