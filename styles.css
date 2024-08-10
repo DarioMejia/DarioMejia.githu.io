@@ -113,3 +113,20 @@ section .content *:not(h2:first-of-type) {
     top: 0;
     font-weight: bold;
 }
+
+/* Specific styling for the Skills section */
+#skills ul {
+    padding-left: 20px;
+}
+
+#skills li {
+    padding-right: 100px; /* Add padding to create space for the years */
+    position: relative; /* Allow absolute positioning for the years */
+}
+
+.years {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+}
