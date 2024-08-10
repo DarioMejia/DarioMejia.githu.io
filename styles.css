@@ -152,3 +152,34 @@ section .content *:not(h2:first-of-type) {
     font-size: 16px;
     color: #555;
 }
+
+#books ul {
+    padding-left: 20px;
+}
+
+#books li {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+#books li strong {
+    font-weight: bold;
+}
+
+#books li em {
+    font-style: italic;
+    color: #888;
+}
+
+#books li a {
+    font-size: 14px;
+    color: #5f92bb;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+#books li a:hover {
+    text-decoration: underline;
+}
