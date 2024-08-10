@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -6,7 +9,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 /* Header Styles */
@@ -17,16 +22,19 @@ header {
     padding: 20px;
     color: #fff;
     position: relative;
+    text-align: left;
+    max-width: 1200px; /* Limit the width to keep content centered */
+    margin: 0 auto; /* Center the header content on the page */
 }
 
 .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 180px); /* Leave space for the image on the right */
 }
 
 .header-content h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
@@ -34,35 +42,43 @@ header {
 .header-content p {
     font-size: 1em;
     margin-bottom: 5px;
+    color: #ddd;
 }
 
 blockquote {
     font-style: italic;
     margin-top: 20px;
-}
-
-footer {
-    text-align: right;
+    color: #bbb;
 }
 
 /* Profile Picture Styles */
 .profile-pic {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    display: inline-block;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 5px solid #fff;
     object-fit: cover;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
+/* Main Content Centering */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Styles */
 section {
     margin: 40px 0;
     padding: 20px;
-    background-color: #f9f9f9; 
+    background-color: #fff; 
     border-radius: 8px;
     text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 section .icon {
@@ -79,15 +95,18 @@ section .icon img {
 
 section .content {
     display: inline-block;
-    max-width: calc(100% - 65px); /* 25px for icon width + 20px margin + extra space */
+    max-width: calc(100% - 65px); 
     vertical-align: top;
 }
 
 section h2 {
+    font-family: 'Montserrat', sans-serif;
     margin-top: 0;
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    border-bottom: 2px solid #5f92bb;
+    padding-bottom: 5px;
 }
 
 section .content *:not(h2:first-of-type) {
@@ -97,93 +116,30 @@ section .content *:not(h2:first-of-type) {
     color: #555;
 }
 
-/* Specific styling for the Education section */
-#education ol {
-    padding-left: 20px;
+/* Divider Styles */
+section + section {
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
 }
 
-#education li {
-    padding-right: 100px; /* Add padding to create space for the years */
-    position: relative; /* Allow absolute positioning for the years */
-}
-
-.years {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-weight: bold;
-}
-
-/* Specific styling for the Skills section */
-#skills ul {
-    padding-left: 20px;
-}
-
-#skills li {
-    padding-right: 100px; /* Add padding to create space for the years */
-    position: relative; /* Allow absolute positioning for the years */
-}
-
-.years {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-weight: bold;
-}
-
-/* Specific styling for the Experience section */
-#experience .content details summary {
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #333;
-    display: inline-block;
-    width: 100%;
-    color: #555; /* Darker color for the experience title */
-}
-
-#experience .content details summary:hover {
-    color: #5f92bb;
-}
-
-#experience .content details p {
-    margin-left: 15px;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-#books ul {
-    padding-left: 20px;
-}
-
-#books li {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555;
-}
-
-#books li strong {
-    font-weight: bold;
-}
-
-#books li em {
-    font-style: italic;
-    color: #888;
-}
-
-#books li a {
-    font-size: 14px;
+/* Link Hover Effects */
+a {
     color: #5f92bb;
     text-decoration: none;
-    margin-left: 5px;
+    transition: color 0.3s ease;
 }
 
-#books li a:hover {
-    text-decoration: underline;
+a:hover {
+    color: #ff6b6b;
 }
 
+/* Skills Highlight */
+#skills li span {
+    color: #5f92bb;
+    font-weight: bold;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
@@ -209,8 +165,8 @@ footer p {
 }
 
 .social-icons a img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     filter: invert(100%);
     transition: transform 0.2s ease-in-out;
 }
